@@ -4,8 +4,18 @@ using UnityEngine;
 
 public class PointScript : MonoBehaviour
 {
-    void OnTriggerEnter2D(Collider2D other)
+
+    [SerializeField] GameObject SpawnScriptObject;
+
+
+    void OnTriggerStay2D(Collider2D other)
     {
-        print("HIT!!");
+        print("HIT Trigger move");
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            SpawnScriptObject.GetComponent<spawner>().SpawnPoint();
+            Destroy(gameObject);
+        }
     }
 }
