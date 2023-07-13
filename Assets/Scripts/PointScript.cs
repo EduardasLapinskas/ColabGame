@@ -6,14 +6,29 @@ public class PointScript : MonoBehaviour
 {
 
     [SerializeField] GameObject SpawnScriptObject;
+    bool inCircle;
+    Collider2D _other;
 
-
-    void OnTriggerStay2D(Collider2D other)
+    void Update()
     {
+        Logic(_other);
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        inCircle = true;
+        _other = other;
+    }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        inCircle = false;
+    }
 
-        if (Input.GetMouseButtonDown(0))
+    void Logic(Collider2D other)
+    {
+        if (Input.GetMouseButtonDown(0) && inCircle)
         {
             SpawnScriptObject.GetComponent<spawner>().SpawnPoint();
+            other.GetComponentInParent<MovingSphere>().ChangeDir();
             Destroy(gameObject);
         }
     }
