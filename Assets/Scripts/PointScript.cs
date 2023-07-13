@@ -10,7 +10,6 @@ public class PointScript : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other)
     {
-        print("HIT Trigger move");
 
         if (Input.GetMouseButtonDown(0))
         {

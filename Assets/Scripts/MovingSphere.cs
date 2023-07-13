@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +18,9 @@ public class MovingSphere : MonoBehaviour
     {
         gameObject.transform.rotation =  Quaternion.Euler(0,0,z);
        z = (float)(z +0.2);
+      
+    
+       
     }
     
 }

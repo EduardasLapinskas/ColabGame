@@ -22,6 +22,7 @@ public class spawner : MonoBehaviour
         {
             SpawnPoint();
         }
+         
 
     }
 
