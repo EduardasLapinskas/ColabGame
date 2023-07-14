@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
 
     void UpdateHighScoreText()
     {
-        highScoreText.text = PlayerPrefs.GetInt("Highscore", 0).ToString();
+        highScoreText.text = "Highscore: " + PlayerPrefs.GetInt("Highscore", 0).ToString();
     }
 
     public void gameOver()
