@@ -201,7 +201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 835063535}
   m_Layer: 0
-  m_Name: Parts
+  m_Name: Lock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -427,14 +427,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 953319669}
     m_Modifications:
-    - target: {fileID: 1181007703160506321, guid: 9a722fde5a0d6fd4db3afda1040162e0, type: 3}
-      propertyPath: m_margin.z
-      value: -66.2716
-      objectReference: {fileID: 0}
-    - target: {fileID: 1181007703417217076, guid: 9a722fde5a0d6fd4db3afda1040162e0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6923457554505540448, guid: 9a722fde5a0d6fd4db3afda1040162e0, type: 3}
       propertyPath: m_Name
       value: UI things
@@ -549,10 +541,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 953319667}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e97a8555e28c6324fb2e4e06a0507272, type: 3}
+  m_Script: {fileID: 11500000, guid: dc55c5131ecaedf4d96c7c3a3d4327ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 2
+  score: 0
   scoreText: {fileID: 1323862504}
   gameoverScreen: {fileID: 933405783}
   highScoreText: {fileID: 933405781}

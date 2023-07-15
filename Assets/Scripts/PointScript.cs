@@ -9,6 +9,7 @@ public class PointScript : MonoBehaviour
     bool inCircle;
     bool isBehindCircle;
     Collider2D _other;
+    public int skaicius;
 
     void Start()
     {
@@ -47,8 +48,9 @@ public class PointScript : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && inCircle)
         {
-            //cia pridek taska pasirink skaiciu 
-            //gamemanager.addScore(int skaicius);
+            skaicius = 1;
+            _gameManager.GetComponent<GameManager>().addScore( skaicius);
+        
             SpawnScriptObject.GetComponent<spawner>().SpawnPoint();
             other.GetComponentInParent<MovingSphere>().ChangeDir();
             isBehindCircle = false;
