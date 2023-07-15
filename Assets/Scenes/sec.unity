@@ -164,19 +164,13 @@ MonoBehaviour:
     volume: 0.51
     pitch: 0.64
     source: {fileID: 0}
-    loop: 1
+    loop: 0
   - name: restart
     clip: {fileID: 8300000, guid: f7f6e41d4be21d445902a238d2ee455d, type: 3}
     volume: 0.51
     pitch: 0.64
     source: {fileID: 0}
-    loop: 1
-  - name: playbutton
-    clip: {fileID: 8300000, guid: f7f6e41d4be21d445902a238d2ee455d, type: 3}
-    volume: 0.51
-    pitch: 0.64
-    source: {fileID: 0}
-    loop: 1
+    loop: 0
 --- !u!4 &418317600
 Transform:
   m_ObjectHideFlags: 0
