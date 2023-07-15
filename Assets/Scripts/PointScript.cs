@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PointScript : MonoBehaviour
 {
-    [SerializeField] GameObject SpawnScriptObject;
+    //[SerializeField] GameObject SpawnScriptObject;
     GameObject _gameManager;
     bool inCircle;
     bool isBehindCircle;
@@ -50,10 +50,10 @@ public class PointScript : MonoBehaviour
         {
             FindObjectOfType<AudioManagerScript>().Play("appear-online");
             skaicius = 1;
-            
-            _gameManager.GetComponent<GameManager>().addScore( skaicius);
-        
-            SpawnScriptObject.GetComponent<spawner>().SpawnPoint();
+
+            _gameManager.GetComponent<GameManager>().addScore(skaicius);
+
+            //SpawnScriptObject.GetComponent<spawner>().SpawnPoint();
             other.GetComponentInParent<MovingSphere>().ChangeDir();
             isBehindCircle = false;
 
