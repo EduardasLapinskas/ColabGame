@@ -9,5 +9,6 @@ public class MainMenuScript : MonoBehaviour
     public void LaunchGame()
     {
         SceneManager.LoadScene("sec");
+        FindObjectOfType<AudioManagerScript>().Play("playbutton");
     }
 }

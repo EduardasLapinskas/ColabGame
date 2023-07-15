@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayButton()
     {
+        FindObjectOfType<AudioManagerScript>().Play("play");
         SceneManager.LoadScene("sec");
        
     }

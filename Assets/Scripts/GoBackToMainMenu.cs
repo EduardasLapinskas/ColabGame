@@ -8,5 +8,6 @@ public class GoBackToMainMenu : MonoBehaviour
     public void RetryButton()
     {
         SceneManager.LoadScene("sec");
+        FindObjectOfType<AudioManagerScript>().Play("restart");
     }
 }

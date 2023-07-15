@@ -48,7 +48,9 @@ public class PointScript : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && inCircle)
         {
+            FindObjectOfType<AudioManagerScript>().Play("appear-online");
             skaicius = 1;
+            
             _gameManager.GetComponent<GameManager>().addScore( skaicius);
         
             SpawnScriptObject.GetComponent<spawner>().SpawnPoint();
