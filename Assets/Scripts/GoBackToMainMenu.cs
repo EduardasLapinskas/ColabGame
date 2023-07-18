@@ -7,7 +7,7 @@ public class GoBackToMainMenu : MonoBehaviour
 {
     public void RetryButton()
     {
-        SceneManager.LoadScene("sec");
+        SceneManager.LoadScene("game");
         FindObjectOfType<AudioManagerScript>().Play("restart");
     }
 }

@@ -8,7 +8,7 @@ public class MainMenuScript : MonoBehaviour
 {
     public void LaunchGame()
     {
-        SceneManager.LoadScene("sec");
+        SceneManager.LoadScene("game");
         FindObjectOfType<AudioManagerScript>().Play("playbutton");
     }
 }
