@@ -24,7 +24,7 @@ public class PointScript : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         inCircle = true;
-        //
+        print("HIT");
         _other = other;
     }
     void OnTriggerExit2D(Collider2D other)

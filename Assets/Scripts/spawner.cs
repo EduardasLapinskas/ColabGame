@@ -40,13 +40,19 @@ public class spawner : MonoBehaviour
     {
         int randRotation = Random.Range(0, 360);
 
-        Vector3 rotationPos = Quaternion.Euler(0f, 0f, randRotation) * new Vector2(radius, radius);
-        float distance = Vector2.Distance(playerTransform.position, rotationPos);
 
+
+        // Vector3 rotationPos = Quaternion.Euler(0f, 0f, randRotation) * new Vector2(radius, radius);
+        // float distance = Vector2.Distance(playerTransform.position, rotationPos);
+
+        Vector2 pos = new Vector2(Mathf.Sin(Mathf.Deg2Rad * randRotation), Mathf.Cos(Mathf.Deg2Rad * randRotation)) * radius;
+        float distance = Vector2.Distance(playerTransform.position, pos);
         if (distance < 2f)
-            rotationPos = Quaternion.Euler(0f, 0f, randRotation + 180) * new Vector2(radius, radius);
+            pos = new Vector2(Mathf.Sin(Mathf.Deg2Rad * randRotation - 30), Mathf.Cos(Mathf.Deg2Rad * randRotation - 30)) * radius;
+        // if (distance < 2f)
+        //     rotationPos = Quaternion.Euler(0f, 0f, randRotation + 180) * new Vector2(radius, radius);
 
-        pointInScene = Instantiate(point, rotationPos, Quaternion.identity);
+        pointInScene = Instantiate(point, pos, Quaternion.identity);
     }
 
 }
