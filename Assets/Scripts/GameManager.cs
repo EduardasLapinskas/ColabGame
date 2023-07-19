@@ -38,6 +38,9 @@ public class GameManager : MonoBehaviour
     {
         UpdateHighScoreText();
         gameoverScreen.SetActive(true);
+        FindObjectOfType<AudioManagerScript>().Play("LockFail");
+        FindObjectOfType<AudioManagerScript>().Stop("Background music");
+        print("test");
 
         LockAnimation();
     }

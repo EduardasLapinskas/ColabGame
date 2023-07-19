@@ -23,7 +23,7 @@ public class AudioManagerScript : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
 
-        foreach(Sound s in sounds)
+        foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
@@ -47,7 +47,19 @@ public class AudioManagerScript : MonoBehaviour
             Debug.Log("Sound: " + name + " not found!");
             return;
         }
-            
+
         s.source.Play();
+    }
+
+    public void Stop(string name)
+    {
+        Sound s = Array.Find(sounds, Sound => Sound.name == name);
+        if (s == null)
+        {
+            Debug.Log("Sound: " + name + " not found!");
+            return;
+        }
+
+        s.source.Stop();
     }
 }

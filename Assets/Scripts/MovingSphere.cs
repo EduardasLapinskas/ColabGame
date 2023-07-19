@@ -7,18 +7,18 @@ using UnityEngine;
 
 public class MovingSphere : MonoBehaviour
 {
-    private float V = 1.5f;
-    public float z = 0;
+    [SerializeField] float speed = 1.5f;
+    private float paddleAngle = 0;
+    [SerializeField] GameManager _gameManager;
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     // Update is called once per frame
     void Update()
     {
- 
+
         //gameObject.transform.rotation = Quaternion.Euler(0, 0, z);
         //z = (float)(z + V);
 
@@ -27,12 +27,13 @@ public class MovingSphere : MonoBehaviour
     }
     void FixedUpdate()
     {
-        gameObject.transform.rotation = Quaternion.Euler(0, 0, z );
-        z = (float)(z + V);
+        gameObject.transform.rotation = Quaternion.Euler(0, 0, paddleAngle);
+        paddleAngle = (float)(paddleAngle + speed);
+
     }
     public void ChangeDir()
     {
-        V *= -1;
+        speed *= -1;
     }
 
 }

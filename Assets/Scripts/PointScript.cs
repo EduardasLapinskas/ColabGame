@@ -8,6 +8,7 @@ public class PointScript : MonoBehaviour
     GameObject _gameManager;
     bool inCircle;
     bool isBehindCircle;
+    bool isRunning = true;
     Collider2D _other;
     public int skaicius;
 
@@ -19,7 +20,8 @@ public class PointScript : MonoBehaviour
 
     void Update()
     {
-        Logic(_other);
+        if (isRunning)
+            Logic(_other);
     }
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -37,12 +39,13 @@ public class PointScript : MonoBehaviour
 
     void Logic(Collider2D other)
     {
-        if (isBehindCircle)
+        if (isBehindCircle && isRunning)
         {
             if (_gameManager != null)
                 _gameManager.GetComponent<GameManager>().gameOver();
 
             other.gameObject.SetActive(false); // isjungia square player
+            isRunning = false;
             return; // nebevykdo kas uz jo
         }
 

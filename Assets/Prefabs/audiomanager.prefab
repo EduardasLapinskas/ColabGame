@@ -63,3 +63,9 @@ MonoBehaviour:
     pitch: 0.64
     source: {fileID: 0}
     loop: 0
+  - name: LockFail
+    clip: {fileID: 8300000, guid: 42d0235a218ed644089080ca2144f07d, type: 3}
+    volume: 1
+    pitch: 0.92
+    source: {fileID: 0}
+    loop: 0
