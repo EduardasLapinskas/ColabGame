@@ -12,6 +12,10 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI highScoreText;
 
+    [SerializeField] GameObject Lock;
+    [SerializeField] GameObject LockUI;
+
+
     public void addScore(int scoreToAdd)
     {
         score += scoreToAdd;
@@ -34,6 +38,8 @@ public class GameManager : MonoBehaviour
     {
         UpdateHighScoreText();
         gameoverScreen.SetActive(true);
+
+        LockAnimation();
     }
 
 
@@ -41,5 +47,17 @@ public class GameManager : MonoBehaviour
     public void restartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+
+    void LockAnimation()
+    {
+
+        if (Lock.TryGetComponent<Animator>(out Animator lockAnime) && LockUI.TryGetComponent<Animator>(out Animator LockUIAnime))
+        {
+            lockAnime.SetTrigger("FailUnlock");
+            LockUIAnime.SetTrigger("FailUnlock");
+        }
+
     }
 }
