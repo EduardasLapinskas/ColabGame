@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class PlayGame : MonoBehaviour
 {
-   public void PlayButtonGame()
-   {
-    SceneManager.LoadScene("game");
-    FindObjectOfType<AudioManagerScript>().Play("restart");
-   } 
+    public void PlayButtonGame()
+    {
+        SceneManager.LoadScene("sec");
+        FindObjectOfType<AudioManagerScript>().Play("restart");
+    }
 }
-  
+
